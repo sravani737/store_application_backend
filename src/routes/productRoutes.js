@@ -38,7 +38,8 @@ router.get('/', authenticateToken,productController.getAllProducts);
 router.get('/:id', productController.getProductById);
 
 // Update product by id
-router.put('/:id', productController.updateProduct);
+router.put('/:id/add-stock', productController.updateProduct);
+
 
 // Delete product by id
 router.delete('/:id', authenticateToken,productController.deleteProduct);

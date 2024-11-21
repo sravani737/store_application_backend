@@ -3,10 +3,11 @@ const connectDB = require('./src/config/db');
 const userRoutes = require('./src/routes/userRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const roleRoutes = require('./src/routes/roleRoutes');
-const categoryRoutes = require('./src/routes/categoryRoutes')
+const categoryRoutes = require('./src/routes/categoryRoutes');
 const cartRoutes = require('./src/routes/CartRoutes');
-const orderRoutes = require('./src/routes/OrderRoutes')
-const ReviewRoutes = require('./src/routes/ReviewRoutes')
+const orderRoutes = require('./src/routes/OrderRoutes');
+const ReviewRoutes = require('./src/routes/ReviewRoutes');
+const AddressRoutes = require('./src/routes/AddressRoutes')
 
 
 const app = express();
@@ -26,8 +27,9 @@ app.use('/api/products', productRoutes);
 app.use('/api/roles',roleRoutes);
 app.use('/api/categories',categoryRoutes);
 app.use('/api',cartRoutes);
-app.use('/api',orderRoutes)
-app.use('/api',ReviewRoutes)
+app.use('/api',orderRoutes);
+app.use('/api',ReviewRoutes);
+app.use('/api/address',AddressRoutes);
 
 const PORT = process.env.PORT || 5000;
 
